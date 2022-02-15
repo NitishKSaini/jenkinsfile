@@ -1,6 +1,5 @@
-node {  
-    stage('Build') { 
-       sh 'mv /var/jenkins_home/workspace/test /var/jenkins_home/workspace/test746' 
-    }
-    
+node {
+    checkout scm
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    customImage.push()
 }
