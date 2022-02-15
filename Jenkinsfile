@@ -1,4 +1,4 @@
 node {  
     stage('Build') { 
-       sh 'mv test test500' 
+       sh 'mv /var/jenkins_home/workspace/test /var/jenkins_home/workspacetest746' 
     }
